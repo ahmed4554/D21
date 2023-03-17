@@ -1,0 +1,45 @@
+{
+    "activity": "Colors",
+    "names": [
+        "BLACK",
+        "BLUE",
+        "BROWN",
+        "GREEN",
+        "GREY",
+        "ORANGE",
+        "PINK",
+        "PURBLE",
+        "RED",
+        "WHITE",
+        "YELLOW"
+    ],
+    "color": [
+        "Database/colors/color/BLACK.png",
+        "Database/colors/color/BLUE.png",
+        "Database/colors/color/BROWN.png",
+        "Database/colors/color/GREEN.png",
+        "Database/colors/color/GREY.png",
+        "Database/colors/color/ORNAGE.png",
+        "Database/colors/color/PINK.png",
+        "Database/colors/color/PURBLE.png",
+        "Database/colors/color/RED.png",
+        "Database/colors/color/WHITE.png",
+        "Database/colors/color/YELLOW.png"
+    ],
+    "sounds": [
+        "Database/colors/Sounds/black.mp3",
+        "Database/colors/Sounds/blue.mp3",
+        "Database/colors/Sounds/brown.mp3",
+        "Database/colors/Sounds/green.mp3",
+        "Database/colors/Sounds/grey.mp3",
+        "Database/colors/Sounds/orange.mp3",
+        "Database/colors/Sounds/pink.mp3",
+        "Database/colors/Sounds/purble.mp3",
+        "Database/colors/Sounds/red.mp3",
+        "Database/colors/Sounds/white.mp3",
+        "Database/colors/Sounds/yellow.mp3"
+    ],
+    "questions": [
+        "What is the name of this color"
+    ]
+}

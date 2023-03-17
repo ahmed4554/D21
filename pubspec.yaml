@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   lottie: ^1.4.2
-
+  floating_action_bubble: ^1.1.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,6 +61,16 @@ flutter:
   assets:
     - assets/
     - assets/lotties/
+    - assets/for_design/
+    - assets/Database/Database/char/alphabet/
+    - assets/D21/images/images_number/
+    - assets/D21/images/images_animal/
+    - assets/D21/images/images_fruits/
+    - assets/D21/images/images_pictures/7/
+    - assets/D21/images/images_pictures/dots/
+    - assets/D21/images/images_pictures/tally/
+    - assets/D21/images/images_pictures/cubes/
+    - assets/healthy_food/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

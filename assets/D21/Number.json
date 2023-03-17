@@ -1,0 +1,143 @@
+{
+    "activity": "number",
+    "names": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen",
+        "twenty"
+    ],
+    "pictures": [
+        "assets/D21/images/images_number/1/1.svg",
+        "assets/D21/images/images_number/2/2.svg",
+        "assets/D21/images/images_number/3/3.svg",
+        "assets/D21/images/images_number/4/4.svg",
+        "assets/D21/images/images_number/5/5.svg",
+        "assets/D21/images/images_number/6/6.svg",
+        "assets/D21/images/images_number/7/7.svg",
+        "assets/D21/images/images_number/8/8.svg",
+        "assets/D21/images/images_number/9/9.svg",
+        "assets/D21/images/images_number/10/10.svg",
+        "assets/D21/images/images_number/11/11.svg",
+        "assets/D21/images/images_number/12/12.svg",
+        "assets/D21/images/images_number/13/13.svg",
+        "assets/D21/images/images_number/14/14.svg",
+        "assets/D21/images/images_number/15/15.svg",
+        "assets/D21/images/images_number/16/16.svg",
+        "assets/D21/images/images_number/17/17.svg",
+        "assets/D21/images/images_number/18/18.svg",
+        "assets/D21/images/images_number/19/19.svg",
+        "assets/D21/images/images_number/20/20.svg"
+    ],
+    "sounds": [
+        "assets/D21/sounds/sounds_number/1.mp3",
+        "assets/D21/sounds/sounds_number/2.mp3",
+        "assets/D21/sounds/sounds_number/3.mp3",
+        "assets/D21/sounds/sounds_number/4.mp3",
+        "assets/D21/sounds/sounds_number/5.mp3",
+        "assets/D21/sounds/sounds_number/6.mp3",
+        "assets/D21/sounds/sounds_number/7.mp3",
+        "assets/D21/sounds/sounds_number/8.mp3",
+        "assets/D21/sounds/sounds_number/9.mp3",
+        "assets/D21/sounds/sounds_number/10.mp3",
+        "assets/D21/sounds/sounds_number/11.mp3",
+        "assets/D21/sounds/sounds_number/12.mp3",
+        "assets/D21/sounds/sounds_number/13.mp3",
+        "assets/D21/sounds/sounds_number/14.mp3",
+        "assets/D21/sounds/sounds_number/15.mp3",
+        "assets/D21/sounds/sounds_number/16.mp3",
+        "assets/D21/sounds/sounds_number/17.mp3",
+        "assets/D21/sounds/sounds_number/18.mp3",
+        "assets/D21/sounds/sounds_number/19.mp3",
+        "assets/D21/sounds/sounds_number/20.mp3"
+    ],
+    "questions": [
+        {
+            "text":"how many apples are there ?",
+            "pic":"assets/D21/images/images_fruits/apple.png",
+            "answer": "5",
+            "options":["3","1","5"]
+            
+        },
+        {
+            "text":"which one of these represents 7 triangles",
+            "answer":"assets/D21/images/images_pictures/7/right.png",
+            "pic":"",
+            "options":[
+                "assets/D21/images/images_pictures/7/right.png",
+                "assets/D21/images/images_pictures/7/wrong.png"
+            ]
+        },
+        {
+            "text":"how many dots are on the frame ?",
+            "pic":"assets/D21/images/images_pictures/dots/dots.png",
+            "answer": "6",
+            "options":["3","6","5","7","10","0"]
+            
+        },
+        {
+            "text":"how do you write {eighy} by digit ?",
+            "answer": "8",
+            "pic":"",
+            "options":["3","6","8","7","10","0"]
+            
+        },
+        {
+            "text":"how many watermelons are there ?",
+            "pic":"assets/D21/images/images_fruits/apple.png",
+            "answer": "3",
+            "options":["3","1","5","10","0"]
+            
+        },
+        {
+            "text":"which number is larger ?",
+            "answer": "7",
+            "pic":"",
+            "options":["5","7"]
+            
+        },
+        {
+            "text":"which number is smaller ?",
+            "answer": "0",
+            "pic":"",
+            "options":["0","8"]
+            
+        },
+        {
+            "text":"which one of these is more ?",
+            "answer":"assets/D21/images/images_pictures/7/right.png",
+            "pic":"",
+            "options":[
+                "assets/D21/images/images_pictures/7/right.png",
+                "assets/D21/images/images_pictures/7/wrong.png"
+            ]
+        },
+        {
+            "text":"Count the tally marks. What number is shown?",
+            "pic":"assets/D21/images/images_pictures/tally/tally.png",
+            "answer":"5",
+            "options":["3","1","5","10","0"]
+        },
+        {
+            "text":"how many cubes are there ?",
+            "pic":"assets/D21/images/images_pictures/cubes/cubes.png",
+            "answer":"6",
+            "options":["3","6","5","10","0"]
+        }
+    ]
+}
