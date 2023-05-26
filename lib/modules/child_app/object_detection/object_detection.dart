@@ -1,13 +1,12 @@
-import 'dart:io';
-import 'dart:developer';
-import 'package:dio/dio.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project/components/custom_color.dart';
 import 'package:project/modules/child_app/home_Screen/home_screen.dart';
 import 'package:project/network/dio_helper/dio_helper.dart';
+import 'package:project/utils/cubits/data_cubit/data_cubit.dart';
+import 'package:project/utils/cubits/data_cubit/data_states.dart';
 
 class ObjectDetectionScreen extends StatefulWidget {
   const ObjectDetectionScreen({Key? key}) : super(key: key);
@@ -18,58 +17,6 @@ class ObjectDetectionScreen extends StatefulWidget {
 
 class _GallatyScreenState extends State<ObjectDetectionScreen>
     with SingleTickerProviderStateMixin {
-  var image;
-
-  final imagePicker = ImagePicker();
-
-  uploadImage() async {
-    var pickedImage = await imagePicker.pickImage(
-      source: ImageSource.camera,
-      imageQuality: 50,
-      maxHeight: 200,
-      maxWidth: 200,
-    );
-
-    if (pickedImage != null) {
-      log(pickedImage.path);
-      File image = File(pickedImage.path);
-      log(image.path);
-      FormData data = FormData.fromMap({
-        'image': await MultipartFile.fromFile(image.path,
-            filename: image.path.split('/').last)
-      });
-      // log(data.files.length);
-      DioHelper.uploudImageToDetect(data);
-    } else {}
-  }
-
-  uploadGImage() async {
-    var pickedImage = await imagePicker.pickImage(
-      source: ImageSource.gallery,
-      imageQuality: 50,
-      maxHeight: 200,
-      maxWidth: 200,
-    );
-
-    if (pickedImage != null) {
-      File image = File(pickedImage.path);
-      FormData data = FormData.fromMap({
-        'file': await MultipartFile.fromFile(
-          image.path,
-          filename: image.path.split('/').last,
-        ),
-      });
-
-      log(data.files[0].key.toString());
-      try {
-        Response response = await DioHelper.uploudImageToDetect(data);
-        print(response.data);
-      } catch (e) {
-        print(e);
-      }
-    } else {}
-  }
-
   late Animation<double> animation;
   late AnimationController animationController;
   @override
@@ -88,6 +35,13 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
     super.initState();
   }
 
+  List<double> boxCordinates = [];
+  double width = 0;
+  double height = 0;
+  num classPercentage = 0;
+  String className = '';
+  Radius noRadius = Radius.zero;
+  Radius radius = const Radius.circular(10);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,26 +64,103 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
           elevation: 0,
           backgroundColor: CustomColor.blue11,
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                'click the button below to open the camera or gallery :'
-                    .toUpperCase(),
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+        body: BlocConsumer<DataCubit, DataStates>(
+          listener: (context, state) {},
+          builder: (context, state) {
+            var c = DataCubit.get(context);
+            if (c.objectDetection != null) {
+              boxCordinates =
+                  c.objectDetection!.results![0].entities![0].objects![0].box!;
+              className = c.objectDetection!.results![0].entities![0]
+                  .objects![0].entities![0].classes!.keys
+                  .toList()[0];
+              classPercentage = (c.objectDetection!.results![0].entities![0]
+                          .objects![0].entities![0].classes!.values.first *
+                      100)
+                  .round();
+            }
+
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Text(
+                      'click the button below to open the camera or gallery :'
+                          .toUpperCase(),
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  c.objectDetection != null
+                      ? Stack(
+                          children: [
+                            Image(
+                              width: 400,
+                              height: 600,
+                              image: FileImage(
+                                c.image!,
+                              ),
+                              fit: BoxFit.fill,
+                            ),
+                            Positioned(
+                              left: 400 * boxCordinates[0],
+                              top: 600 * boxCordinates[1] - 30,
+                              child: Container(
+                                alignment: Alignment.center,
+                                padding: const EdgeInsets.all(5),
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: radius,
+                                    topRight: radius,
+                                    bottomLeft: noRadius,
+                                    bottomRight: noRadius,
+                                  ),
+                                ),
+                                child: Text(
+                                  '$className : $classPercentage %',
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              left: 400 * boxCordinates[0],
+                              top: 600 * boxCordinates[1],
+                              child: Container(
+                                width: 450 * boxCordinates[2],
+                                height: 600 * boxCordinates[3],
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: noRadius,
+                                    topRight: radius,
+                                    bottomLeft: radius,
+                                    bottomRight: radius,
+                                  ),
+                                  border: Border.all(
+                                    color: Colors.yellow,
+                                    width: 3.5,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                      : Lottie.asset(
+                          'assets/lotties/object_detection.json',
+                        ),
+                ],
               ),
-            ),
-            Expanded(
-              child: Lottie.asset(
-                'assets/lotties/object_detection.json',
-              ),
-            ),
-          ],
+            );
+          },
         ),
         //Init Floating Action Bubble
         floatingActionButton: FloatingActionBubble(
@@ -145,7 +176,7 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
                 fontSize: 16.0,
                 color: Colors.white,
               ),
-              onPress: uploadImage,
+              onPress: DataCubit.get(context).uploadImage,
             ),
             // Floating action menu item
             Bubble(
@@ -157,16 +188,18 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
                   fontSize: 16.0,
                   color: Colors.white,
                 ),
-                onPress: uploadGImage),
+                onPress: DataCubit.get(context).uploadGImage),
           ],
 
           // animation controller
           animation: animation,
 
           // On pressed change animation state
-          onPress: () => animationController.isCompleted
-              ? animationController.reverse()
-              : animationController.forward(),
+          onPress: () {
+            animationController.isCompleted
+                ? animationController.reverse()
+                : animationController.forward();
+          },
 
           // Floating Action button Icon color
           iconColor: CustomColor.blue11,

@@ -1,9 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 
-List<String> bloodKinds =
-[
+List<String> bloodKinds = [
   'A+',
   'A-',
   'B+',
@@ -14,8 +11,7 @@ List<String> bloodKinds =
   'AB-',
 ];
 
-var shapes =
-{
+var shapes = {
   "activity": "shapes",
   "names": [
     "Circle",
@@ -31,7 +27,6 @@ var shapes =
     "Trapezoid",
     "Triangle"
   ],
-
   "shapes": [
     "assets/Database/shapes/shapes/circle.png",
     "assets/Database/shapes/shapes/heart.png",
@@ -60,16 +55,11 @@ var shapes =
     "Database/shapes/sounds/trapezoid.mp3",
     "Database/shapes/sounds/triangle.mp3"
   ],
-  "questions":
-  [
-    "What is the name of this shape ?"
-  ]
+  "questions": ["What is the name of this shape ?"]
 };
 
-var qShapes =
-{
-  "questions":
-  [
+var qShapes = {
+  "questions": [
     {
       "kind": "text",
       "text": "What is this shape?",
@@ -132,7 +122,11 @@ var qShapes =
       "text2": "",
       "pic": "assets/Database/shapes/shapes/octagon.png",
       "answer": "8",
-      "options": ["4", "7", "8",]
+      "options": [
+        "4",
+        "7",
+        "8",
+      ]
     },
     {
       "kind": "text",
@@ -140,7 +134,11 @@ var qShapes =
       "text2": "",
       "pic": "assets/Database/shapes/shapes/rectangle.png",
       "answer": "7",
-      "options": ["5", "4", "7",]
+      "options": [
+        "5",
+        "4",
+        "7",
+      ]
     },
     {
       "kind": "text",
@@ -148,16 +146,18 @@ var qShapes =
       "text2": "",
       "pic": "assets/Database/shapes/shapes/square.png",
       "answer": "4",
-      "options": ["3", "4", "5",]
+      "options": [
+        "3",
+        "4",
+        "5",
+      ]
     },
   ]
 };
 
-var animals =
-{
-  "activity":"animals",
-  "names":
-  [
+var animals = {
+  "activity": "animals",
+  "names": [
     "Ant",
     "Bear",
     "Crocodile",
@@ -185,8 +185,7 @@ var animals =
     "Yak",
     "Zebra"
   ],
-  "shapes":
-  [
+  "shapes": [
     "assets/Database/animals/images/Ant.png",
     "assets/Database/animals/images/Bear.png",
     "assets/Database/animals/images/Crocodile.png",
@@ -214,8 +213,7 @@ var animals =
     "assets/Database/animals/images/Yak.png",
     "assets/Database/animals/images/Zebra.png"
   ],
-  "sounds":
-  [
+  "sounds": [
     "assets/Database/animals/Sounds/ant.mp3",
     "assets/Database/animals/Sounds/bear.mp3",
     "assets/Database/animals/Sounds/crocodile.mp3",
@@ -243,8 +241,7 @@ var animals =
     "assets/Database/animals/Sounds/yak.mp3",
     "assets/Database/animals/Sounds/zebra.mp3"
   ],
-  "questions":
-  [
+  "questions": [
     {
       "text": "How many ants are there ?",
       "kind": "text",
@@ -324,10 +321,8 @@ var animals =
   ]
 };
 
-var qAnimals =
-{
-  "questions":
-  [
+var qAnimals = {
+  "questions": [
     {
       "kind": "text",
       "text": "What is the name of this animal?",
@@ -411,8 +406,7 @@ var qAnimals =
   ]
 };
 
-var alpha =
-{
+var alpha = {
   "activity": "alphabet",
   "alpha": [
     "a",
@@ -581,103 +575,97 @@ var alpha =
     "assets/Database/char/Voice/X Xylophone.mp3",
     "assets/Database/char/Voice/Y Yellow.mp3",
     "assets/Database/char/Voice/Z Zig Zag.mp3"
-
   ]
-
 };
 
-var qAlpha =
-{
-  "questions":
-  [
+var qAlpha = {
+  "questions": [
     {
-      "kind":"text",
-      "text":"Pick the lowercase letter that matches?",
-      "text2":"S",
-      "pic":"",
-      "answer":"s",
-      "options":["x","p","s"]
+      "kind": "text",
+      "text": "Pick the lowercase letter that matches?",
+      "text2": "S",
+      "pic": "",
+      "answer": "s",
+      "options": ["x", "p", "s"]
     },
     {
-      "kind":"text",
-      "text":"Pick the uppercase letter that matches?",
-      "text2":"g",
-      "pic":"",
-      "answer":"G",
-      "options":["E","G","h"]
+      "kind": "text",
+      "text": "Pick the uppercase letter that matches?",
+      "text2": "g",
+      "pic": "",
+      "answer": "G",
+      "options": ["E", "G", "h"]
     },
     {
-      "kind":"text",
-      "text":"What is the alphabet?",
-      "text2":"",
-      "pic":"assets/Database/char/dab.png",
-      "answer":"Dabelyu",
-      "options":["Wai","Dabelyu","Te"]
+      "kind": "text",
+      "text": "What is the alphabet?",
+      "text2": "",
+      "pic": "assets/Database/char/dab.png",
+      "answer": "Dabelyu",
+      "options": ["Wai", "Dabelyu", "Te"]
     },
     {
-      "kind":"text",
-      "text":"How do you spell 'book'?",
-      "text2":"",
-      "pic":"assets/Database/char/book.png",
-      "answer":"b-o-o-k",
-      "options":["b-o-o-k","bi-o-o-k","b-o-a-k"]
+      "kind": "text",
+      "text": "How do you spell 'book'?",
+      "text2": "",
+      "pic": "assets/Database/char/book.png",
+      "answer": "b-o-o-k",
+      "options": ["b-o-o-k", "bi-o-o-k", "b-o-a-k"]
     },
     {
-      "kind":"text",
-      "text":"How do u spell 'bird'?",
-      "text2":"",
-      "pic":"assets/Database/char/bird.png",
-      "answer":"b-i-r-d",
-      "options":["be-i-r-d","b-ie-r-ed","b-i-r-d"]
+      "kind": "text",
+      "text": "How do u spell 'bird'?",
+      "text2": "",
+      "pic": "assets/Database/char/bird.png",
+      "answer": "b-i-r-d",
+      "options": ["be-i-r-d", "b-ie-r-ed", "b-i-r-d"]
     },
     {
-      "kind":"text",
-      "text":"Which letter does the word 'Zebra' starts with?",
-      "text2":"",
-      "pic":"assets/Database/animals/images/Zebra.png",
-      "answer":"Z",
-      "options":["C","Z","X"]
+      "kind": "text",
+      "text": "Which letter does the word 'Zebra' starts with?",
+      "text2": "",
+      "pic": "assets/Database/animals/images/Zebra.png",
+      "answer": "Z",
+      "options": ["C", "Z", "X"]
     },
     {
-      "kind":"text",
-      "text":"Which letter does the word 'fish' starts with?",
-      "text2":"",
-      "pic":"assets/Database/char/fish.png",
-      "answer":"f",
-      "options":["f","N","R"]
+      "kind": "text",
+      "text": "Which letter does the word 'fish' starts with?",
+      "text2": "",
+      "pic": "assets/Database/char/fish.png",
+      "answer": "f",
+      "options": ["f", "N", "R"]
     },
     {
-      "kind":"text",
-      "text":"How many letters are in the alphabet?",
-      "text2":"",
-      "pic":"",
-      "answer":"26",
-      "options":["30","88","26"]
+      "kind": "text",
+      "text": "How many letters are in the alphabet?",
+      "text2": "",
+      "pic": "",
+      "answer": "26",
+      "options": ["30", "88", "26"]
     },
     {
-      "kind":"text",
-      "text":"Which letter comes next?",
-      "text2":"H",
-      "pic":"",
-      "answer":"I",
-      "options":["I","J","K"]
+      "kind": "text",
+      "text": "Which letter comes next?",
+      "text2": "H",
+      "pic": "",
+      "answer": "I",
+      "options": ["I", "J", "K"]
     },
     {
-      "kind":"text",
-      "text":"Which letter comes next?",
-      "text2":"Q-R-S-",
-      "pic":"",
-      "answer":"T",
-      "options":["U","T","V"]
+      "kind": "text",
+      "text": "Which letter comes next?",
+      "text2": "Q-R-S-",
+      "pic": "",
+      "answer": "T",
+      "options": ["U", "T", "V"]
     },
   ]
 };
 
-var color =
-{
+var color = {
   "activity": "Colors",
-  "names":
-  [
+  "names": [
     "Black",
     "Blue",
     "Brown",
@@ -690,8 +678,7 @@ var color =
     "White",
     "Yellow"
   ],
-  "shapes":
-  [
+  "shapes": [
     "assets/Database/colors/color/BLACK.png",
     "assets/Database/colors/color/BLUE.png",
     "assets/Database/colors/color/BROWN.png",
@@ -704,8 +691,7 @@ var color =
     "assets/Database/colors/color/WHITE.png",
     "assets/Database/colors/color/YELLOW.png"
   ],
-  "pictures":
-  [
+  "pictures": [
     "assets/Database/colors/pictures/BLACK.png",
     "assets/Database/colors/pictures/BLUE.png",
     "assets/Database/colors/pictures/BROWN.png",
@@ -718,8 +704,7 @@ var color =
     "assets/Database/colors/pictures/WHITE.png",
     "assets/Database/colors/pictures/YELLOW.png"
   ],
-  "sounds":
-  [
+  "sounds": [
     "assets/Database/colors/Sounds/black.mp3",
     "assets/Database/colors/Sounds/blue.mp3",
     "assets/Database/colors/Sounds/brown.mp3",
@@ -732,101 +717,95 @@ var color =
     "assets/Database/colors/Sounds/white.mp3",
     "assets/Database/colors/Sounds/yellow.mp3"
   ],
-  "questions":
-  [
-    "What is the name of this color ?"
-  ]
+  "questions": ["What is the name of this color ?"]
 };
 
-var qColor =
-{
-  "questions":
-  [
+var qColor = {
+  "questions": [
     {
-      "kind":"text",
-      "text":"What is the color?",
-      "text2":"",
-      "pic":"assets/Database/colors/color/BLUE.png",
-      "answer":"Blue",
-      "options":["Orange","Blue","Green"]
+      "kind": "text",
+      "text": "What is the color?",
+      "text2": "",
+      "pic": "assets/Database/colors/color/BLUE.png",
+      "answer": "Blue",
+      "options": ["Orange", "Blue", "Green"]
     },
     {
-      "kind":"text",
-      "text":"What is the color?",
-      "text2":"",
-      "pic":"assets/Database/colors/color/PINK.png",
-      "answer":"Pink",
-      "options":["Pink","Purple","Brown"]
+      "kind": "text",
+      "text": "What is the color?",
+      "text2": "",
+      "pic": "assets/Database/colors/color/PINK.png",
+      "answer": "Pink",
+      "options": ["Pink", "Purple", "Brown"]
     },
     {
-      "kind":"text",
-      "text":"What is the color?",
-      "text2":"",
-      "pic":"assets/Database/colors/color/YELLOW.png",
-      "answer":"Yellow",
-      "options":["Green","Red","Yellow"]
+      "kind": "text",
+      "text": "What is the color?",
+      "text2": "",
+      "pic": "assets/Database/colors/color/YELLOW.png",
+      "answer": "Yellow",
+      "options": ["Green", "Red", "Yellow"]
     },
     {
-      "kind":"text",
-      "text":"What is the color of the hat? ",
-      "text2":"",
-      "pic":"assets/Database/colors/hat.png",
-      "answer":"Green",
-      "options":["Green","Blue","White"]
+      "kind": "text",
+      "text": "What is the color of the hat? ",
+      "text2": "",
+      "pic": "assets/Database/colors/hat.png",
+      "answer": "Green",
+      "options": ["Green", "Blue", "White"]
     },
     {
-      "kind":"text",
-      "text":"What is the color of the shoes?",
-      "text2":"",
-      "pic":"assets/Database/colors/shoes.png",
-      "answer":"Blue",
-      "options":["Red","Pink","Blue"]
+      "kind": "text",
+      "text": "What is the color of the shoes?",
+      "text2": "",
+      "pic": "assets/Database/colors/shoes.png",
+      "answer": "Blue",
+      "options": ["Red", "Pink", "Blue"]
     },
     {
-      "kind":"text",
-      "text":"What is the color of the ball?",
-      "text2":"",
-      "pic":"assets/Database/colors/ball.png",
-      "answer":"Orange",
-      "options":["Yellow","Orange","Black"]
+      "kind": "text",
+      "text": "What is the color of the ball?",
+      "text2": "",
+      "pic": "assets/Database/colors/ball.png",
+      "answer": "Orange",
+      "options": ["Yellow", "Orange", "Black"]
     },
     {
-      "kind":"text",
-      "text":"What is the color the shorts?",
-      "text2":"",
-      "pic":"assets/Database/colors/brown.png",
-      "answer":"Brown",
-      "options":["Brown","Red","Blue"]
+      "kind": "text",
+      "text": "What is the color the shorts?",
+      "text2": "",
+      "pic": "assets/Database/colors/brown.png",
+      "answer": "Brown",
+      "options": ["Brown", "Red", "Blue"]
     },
     {
-      "kind":"text",
-      "text":"What is the color of the car?",
-      "text2":"",
-      "pic":"assets/Database/colors/car.png",
-      "answer":"Red",
-      "options":["Pink","Purple","Red"]
+      "kind": "text",
+      "text": "What is the color of the car?",
+      "text2": "",
+      "pic": "assets/Database/colors/car.png",
+      "answer": "Red",
+      "options": ["Pink", "Purple", "Red"]
     },
     {
-      "kind":"text",
-      "text":"What is the color of the fruit in the picture?",
-      "text2":"",
-      "pic":"assets/Database/colors/grapes.png",
-      "answer":"Purple",
-      "options":["Blue","Purple","White"]
+      "kind": "text",
+      "text": "What is the color of the fruit in the picture?",
+      "text2": "",
+      "pic": "assets/Database/colors/grapes.png",
+      "answer": "Purple",
+      "options": ["Blue", "Purple", "White"]
     },
     {
-      "kind":"text",
-      "text":"What is the color of the flower?",
-      "text2":"",
-      "pic":"assets/Database/colors/sun.png",
-      "answer":"Yellow",
-      "options":["Orange","Black","Yellow"]
+      "kind": "text",
+      "text": "What is the color of the flower?",
+      "text2": "",
+      "pic": "assets/Database/colors/sun.png",
+      "answer": "Yellow",
+      "options": ["Orange", "Black", "Yellow"]
     },
   ]
 };
 
-var fruit =
-{
+var fruit = {
   "activity": "fruit",
   "Names": [
     "Apple",
@@ -909,99 +888,94 @@ var fruit =
     "assets/Database/fruits/voice fruits/yangmei fruit.mp3",
     "assets/Database/fruits/voice fruits/Zwetschge.mp3"
   ],
-  "Questions": [
-    "What is this Fruit ?"
-  ]
+  "Questions": ["What is this Fruit ?"]
 };
 
-var qFruit =
-{
-  "questions":
-  [
+var qFruit = {
+  "questions": [
     {
-      "kind":"text",
-      "text":"Can you name this fruit ?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/peach.png",
-      "answer":"Peach",
-      "options":["Strawberry","Mango","Peach"]
+      "kind": "text",
+      "text": "Can you name this fruit ?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/peach.png",
+      "answer": "Peach",
+      "options": ["Strawberry", "Mango", "Peach"]
     },
     {
-      "kind":"text",
-      "text":"Can you name this fruit ?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/banana.png",
-      "answer":"Banana",
-      "options":["Banana","Lemon","Cucumber"]
+      "kind": "text",
+      "text": "Can you name this fruit ?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/banana.png",
+      "answer": "Banana",
+      "options": ["Banana", "Lemon", "Cucumber"]
     },
     {
-      "kind":"text",
-      "text":"Can you name this fruit ?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/mango.png",
-      "answer":"Mango",
-      "options":["Fig","Mango","Orange"]
+      "kind": "text",
+      "text": "Can you name this fruit ?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/mango.png",
+      "answer": "Mango",
+      "options": ["Fig", "Mango", "Orange"]
     },
     {
-      "kind":"text",
-      "text":"Can you name this fruit ?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/watermelon.png",
-      "answer":"Watermelon",
-      "options":["Orange","Watermelon","Dragon"]
+      "kind": "text",
+      "text": "Can you name this fruit ?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/watermelon.png",
+      "answer": "Watermelon",
+      "options": ["Orange", "Watermelon", "Dragon"]
     },
     {
-      "kind":"text",
-      "text":"Are these grapes?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/graps.png",
-      "answer":"Yes,they are.",
-      "options":["No,they are not","No,it's not","Yes,they are."]
+      "kind": "text",
+      "text": "Are these grapes?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/graps.png",
+      "answer": "Yes,they are.",
+      "options": ["No,they are not", "No,it's not", "Yes,they are."]
     },
     {
-      "kind":"text",
-      "text":"Is this a jackfruit?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/sweet potato.png",
-      "answer":"No,its not",
-      "options":["No,its not","Yes,it is"]
+      "kind": "text",
+      "text": "Is this a jackfruit?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/sweet potato.png",
+      "answer": "No,its not",
+      "options": ["No,its not", "Yes,it is"]
     },
     {
-      "kind":"text",
-      "text":"What color is the apple?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/apple.png",
-      "answer":"Red",
-      "options":["Yellow","Blue","Red"]
+      "kind": "text",
+      "text": "What color is the apple?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/apple.png",
+      "answer": "Red",
+      "options": ["Yellow", "Blue", "Red"]
     },
     {
-      "kind":"text",
-      "text":"What is this?",
-      "text2":"",
-      "pic":"assets/Database/fruits/fruits/str.png",
-      "answer":"Strawberry",
-      "options":["Apple","Strawberry","Lemon"]
+      "kind": "text",
+      "text": "What is this?",
+      "text2": "",
+      "pic": "assets/Database/fruits/fruits/str.png",
+      "answer": "Strawberry",
+      "options": ["Apple", "Strawberry", "Lemon"]
     },
     {
-      "kind":"pic",
-      "text":"Which one of these is kiwi?",
-      "text2":"",
-      "pic":"",
-      "answer":"assets/Database/fruits/fruits/kiwi.png",
-      "options":[
+      "kind": "pic",
+      "text": "Which one of these is kiwi?",
+      "text2": "",
+      "pic": "",
+      "answer": "assets/Database/fruits/fruits/kiwi.png",
+      "options": [
         "assets/Database/fruits/fruits/tangerine.png",
         "assets/Database/fruits/fruits/quince.png",
         "assets/Database/fruits/fruits/kiwi.png",
       ]
     },
     {
-      "kind":"pic",
-      "text":"Which one of these is cherries?",
-      "text2":"",
-      "pic":"",
-      "answer":"assets/Database/fruits/fruits/cherries.png",
-      "options":
-      [
+      "kind": "pic",
+      "text": "Which one of these is cherries?",
+      "text2": "",
+      "pic": "",
+      "answer": "assets/Database/fruits/fruits/cherries.png",
+      "options": [
         "assets/Database/fruits/fruits/graps.png",
         "assets/Database/fruits/fruits/cherries.png",
         "assets/Database/fruits/fruits/quince.png",
@@ -1010,11 +984,9 @@ var qFruit =
   ]
 };
 
-var numbers =
-{
+var numbers = {
   "activity": "numbers",
-  "names":
-  [
+  "names": [
     "Zero",
     "One",
     "Two",
@@ -1026,22 +998,8 @@ var numbers =
     "Eight",
     "Nine"
   ],
-  "number":
-  [
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9"
-  ],
-
-  "shapes":
-  [
+  "number": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  "shapes": [
     "assets/Database/numbers/shapes/0.png",
     "assets/Database/numbers/shapes/1.png",
     "assets/Database/numbers/shapes/2.png",
@@ -1053,9 +1011,7 @@ var numbers =
     "assets/Database/numbers/shapes/8.png",
     "assets/Database/numbers/shapes/9.png",
   ],
-
-  "sounds":
-  [
+  "sounds": [
     "assets/Database/numbers/sounds/0.mp3",
     "assets/Database/numbers/sounds/1.mp3",
     "assets/Database/numbers/sounds/2.mp3",
@@ -1067,20 +1023,14 @@ var numbers =
     "assets/Database/numbers/sounds/8.mp3",
     "assets/Database/numbers/sounds/9.mp3"
   ],
-
-  "questions":
-  [
-    "What is the number?"
-  ]
+  "questions": ["What is the number?"]
 };
 
-var qNumbers =
-{
-  "questions":
-  [
+var qNumbers = {
+  "questions": [
     {
       "text": "How many ants are there ?",
-      "text2":"",
+      "text2": "",
       "kind": "text",
       "pic": "assets/Database/animals/images/Ant.png",
       "answer": "1",
@@ -1088,43 +1038,54 @@ var qNumbers =
     },
     {
       "text": "Which one of these represents 7 triangles",
-      "text2":"",
+      "text2": "",
       "answer": "assets/Database/QNumbers/right.png",
       "kind": "pic",
       "pic": "",
-      "options":
-      [
+      "options": [
         "assets/Database/QNumbers/right.png",
         "assets/Database/QNumbers/wrong.png"
       ]
     },
     {
       "text": "How many dots are on the frame ?",
-      "text2":"",
+      "text2": "",
       "kind": "text",
       "pic": "assets/Database/QNumbers/dots.png",
       "answer": "6",
-      "options": ["3", "6", "5", ]
+      "options": [
+        "3",
+        "6",
+        "5",
+      ]
     },
     {
       "text": "How do you write {Eight} by digit ?",
-      "text2":"",
+      "text2": "",
       "answer": "8",
       "kind": "text",
       "pic": "",
-      "options": ["3", "6", "8", ]
+      "options": [
+        "3",
+        "6",
+        "8",
+      ]
     },
     {
       "text": "How many apples are there ?",
-      "text2":"",
+      "text2": "",
       "pic": "assets/Database/fruits/fruits/apple.png",
       "answer": "1",
       "kind": "text",
-      "options": ["3", "1", "5", ]
+      "options": [
+        "3",
+        "1",
+        "5",
+      ]
     },
     {
       "text": "Which number is larger ?",
-      "text2":"",
+      "text2": "",
       "answer": "7",
       "pic": "",
       "kind": "text",
@@ -1132,7 +1093,7 @@ var qNumbers =
     },
     {
       "kind": "text",
-      "text2":"",
+      "text2": "",
       "text": "Which number is smaller ?",
       "answer": "0",
       "pic": "",
@@ -1140,7 +1101,7 @@ var qNumbers =
     },
     {
       "kind": "pic",
-      "text2":"",
+      "text2": "",
       "text": "Which one of these is bigger ?",
       "answer": "assets/Database/QNumbers/right.png",
       "pic": "",
@@ -1151,25 +1112,32 @@ var qNumbers =
     },
     {
       "kind": "text",
-      "text2":"",
+      "text2": "",
       "text": "Count the tally marks. What number is shown?",
       "pic": "assets/Database/QNumbers/tally.png",
       "answer": "5",
-      "options": ["3", "1", "5",]
+      "options": [
+        "3",
+        "1",
+        "5",
+      ]
     },
     {
       "kind": "text",
-      "text2":"",
+      "text2": "",
       "text": "How many cubes are there ?",
       "pic": "assets/Database/QNumbers/cubes.png",
       "answer": "6",
-      "options": ["3", "6", "5",]
+      "options": [
+        "3",
+        "6",
+        "5",
+      ]
     }
   ]
 };
 
-String healthyFood =
-    '''The American Academy of Pediatrics
+String healthyFood = '''The American Academy of Pediatrics
     Committee on Genetics has noted that those with Down syndrome are likely to develop certain health problems.
     This is thought to happen as a result of body structures not developing normally.
     Children with Down syndrome are likely to be overweight and have a higher risk of obesity.
@@ -1183,8 +1151,7 @@ String healthyFood =
 String aboutUs =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 
-const List<Color> colors =
-[
+const List<Color> colors = [
   Color(0xff0191B4),
   Color(0xffFFC2BB),
   Color(0xff88CDF6),
@@ -1193,8 +1160,7 @@ const List<Color> colors =
   Color(0xff88CDF6),
 ];
 
-List<String> names =
-[
+List<String> names = [
   'Alphabet',
   'Numbers',
   'Shapes',
@@ -1203,8 +1169,7 @@ List<String> names =
   'Fruits'
 ];
 
-List<String> picNames =
-[
+List<String> picNames = [
   'assets/images/child_app/level_one/abc.png',
   'assets/images/child_app/level_one/numbers.png',
   'assets/images/child_app/level_one/shapes.png',
@@ -1215,3 +1180,31 @@ List<String> picNames =
 
 PageController controller = PageController();
 
+List<String> drawingExcercise = [
+  'assets/images/child_app/drawing/1.png',
+  'assets/images/child_app/drawing/2.png',
+  'assets/images/child_app/drawing/3.png',
+  'assets/images/child_app/drawing/4.png',
+  'assets/images/child_app/drawing/5.png',
+  'assets/images/child_app/drawing/6.png',
+  'assets/images/child_app/drawing/7.png',
+  'assets/images/child_app/drawing/8.png',
+  'assets/images/child_app/drawing/9.png',
+  'assets/images/child_app/drawing/10.png',
+  'assets/images/child_app/drawing/11.png',
+  'assets/images/child_app/drawing/12.png',
+  'assets/images/child_app/drawing/13.png',
+  'assets/images/child_app/drawing/14.png',
+  'assets/images/child_app/drawing/15.png',
+  'assets/images/child_app/drawing/16.png',
+  'assets/images/child_app/drawing/17.png',
+  'assets/images/child_app/drawing/18.png',
+  'assets/images/child_app/drawing/19.png',
+  'assets/images/child_app/drawing/20.png',
+  'assets/images/child_app/drawing/21.png',
+  'assets/images/child_app/drawing/22.png',
+  'assets/images/child_app/drawing/23.png',
+  'assets/images/child_app/drawing/24.png',
+  'assets/images/child_app/drawing/25.png',
+  'assets/images/child_app/drawing/26.png',
+];

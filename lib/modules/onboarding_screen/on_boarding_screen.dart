@@ -178,64 +178,66 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     );
   }
 
-  Widget buildBoardingItem(BoardingModel model) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children:
-        [
-          const SizedBox(
-            height: 60.0,
-          ),
-          Center(
-            child: Stack(
-              children: [
-                Center(
-                  child: SvgPicture.asset(
-                    (model.image2),
-                  ),
-                ),
-                Center(
-                  child: SvgPicture.asset(
-                    (model.image),
-                  ),
-                ),
-              ],
+  Widget buildBoardingItem(BoardingModel model) => SingleChildScrollView(
+    child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+          [
+            const SizedBox(
+              height: 60.0,
             ),
-          ),
-          Center(
-            child: Text(
-              model.title,
-              style: const TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
+            Center(
+              child: Stack(
+                children: [
+                  Center(
+                    child: SvgPicture.asset(
+                      (model.image2),
+                    ),
+                  ),
+                  Center(
+                    child: SvgPicture.asset(
+                      (model.image),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-          const SizedBox(
-            height: 65.0,
-          ),
-          Center(
-            child: Column(
-              children:
-              [
-                Text(
-                  model.body,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.grey[600],
-                    fontSize: 16.0,
-                  ),
+            Center(
+              child: Text(
+                model.title,
+                style: const TextStyle(
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
-                  model.body2,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.grey[600],
-                    fontSize: 16.0,
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
-        ],
-      );
+            const SizedBox(
+              height: 65.0,
+            ),
+            Center(
+              child: Column(
+                children:
+                [
+                  Text(
+                    model.body,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  Text(
+                    model.body2,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+  );
 }

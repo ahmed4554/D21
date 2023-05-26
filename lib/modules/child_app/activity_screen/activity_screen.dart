@@ -19,9 +19,7 @@ class QuestionsScreen extends StatefulWidget {
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   var height = 0.0;
-  @override
   int currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height;
@@ -45,50 +43,54 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Text(
-                'Question ${currentIndex + 1} / ${widget.quiz.questions.length}',
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 23.0, fontWeight: FontWeight.w500),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Text(
+                  'Question ${currentIndex + 1} / ${widget.quiz.questions.length}',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                      fontSize: 23.0, fontWeight: FontWeight.w500),
+                ),
               ),
-            ),
-            SizedBox(
-              height: height * .8,
-              child: BuildMultiShadowContainer(
-                child: SizedBox(
-                  height: height * .67,
-                  child: PageView.builder(
-                    controller: controller,
-                    onPageChanged: (int index) {
-                      currentIndex = index;
-                      setState(() {});
-                    },
-                    itemBuilder: (context, index) {
-                      return SizedBox(
-                        height: height * .8,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: MultiChoiseQuestionComponent(
-                                model: widget.quiz.questions[index],
+              SizedBox(
+                height: height * .8,
+                child: BuildMultiShadowContainer(
+                  child: SizedBox(
+                    height: height * .67,
+                    child: PageView.builder(
+                      controller: controller,
+                      onPageChanged: (int index) {
+                        currentIndex = index;
+                        setState(() {});
+                      },
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          height: height * .8,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: MultiChoiseQuestionComponent(
+                                  model: widget.quiz.questions[index],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                    scrollDirection: Axis.horizontal,
-                    itemCount: widget.quiz.questions.length,
+                            ],
+                          ),
+                        );
+                      },
+                      scrollDirection: Axis.horizontal,
+                      itemCount: widget.quiz.questions.length,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
+

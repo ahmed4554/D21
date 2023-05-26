@@ -3,6 +3,7 @@ import 'package:project/components/custom_color.dart';
 import 'package:project/modules/child_app/content_screens/alphabet/alphabet_screen.dart';
 import 'package:project/modules/child_app/content_screens/numbers/numbers_screen.dart';
 import 'package:project/modules/child_app/content_screens/shapes/shapes_screen.dart';
+import 'package:project/modules/child_app/drawing_screen/drawing_screen.dart';
 import 'package:project/modules/child_app/levels_screen/levels_screen.dart';
 
 class LevelOneScreen extends StatelessWidget {
@@ -12,8 +13,7 @@ class LevelOneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children:
-        [
+        children: [
           Container(
             width: double.infinity,
             height: MediaQuery.of(context).size.height * .6,
@@ -27,7 +27,7 @@ class LevelOneScreen extends StatelessWidget {
                   CustomColor.blue11.withOpacity(.8),
                   Colors.white,
                 ],
-                stops: const [.4,.6],
+                stops: const [.4, .6],
                 tileMode: TileMode.clamp,
               ),
             ),
@@ -41,14 +41,11 @@ class LevelOneScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
+              children: [
                 Row(
-                  children:
-                  [
+                  children: [
                     InkWell(
-                      onTap:()
-                      {
+                      onTap: () {
                         Navigator.of(context).pop(
                           MaterialPageRoute(builder: (context) {
                             return const LevelsScreen();
@@ -105,16 +102,14 @@ class LevelOneScreen extends StatelessWidget {
                       width: 102.0,
                       height: 102.0,
                       margin: const EdgeInsets.only(top: 10),
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.white,
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset.zero,
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(50.0)),
+                      decoration: BoxDecoration(boxShadow: const [
+                        BoxShadow(
+                          color: Colors.white,
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                          offset: Offset.zero,
+                        )
+                      ], borderRadius: BorderRadius.circular(50.0)),
                       child: Image.asset(
                         "assets/images/profile/eliza.png",
                       ),
@@ -125,11 +120,9 @@ class LevelOneScreen extends StatelessWidget {
                   height: 55.0,
                 ),
                 Row(
-                  children:
-                  [
+                  children: [
                     InkWell(
-                      onTap: ()
-                      {
+                      onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) {
                             return const AlphabetScreen();
@@ -137,10 +130,9 @@ class LevelOneScreen extends StatelessWidget {
                         );
                       },
                       child: Stack(
-                        children:
-                        [
+                        children: [
                           Container(
-                            height: 200.0 ,
+                            height: 200.0,
                             width: 165.0,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -150,7 +142,8 @@ class LevelOneScreen extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 4,
                                   blurRadius: 7,
-                                  offset: const Offset(1.5, 2), // changes position of shadow
+                                  offset: const Offset(
+                                      1.5, 2), // changes position of shadow
                                 ),
                               ],
                             ),
@@ -161,7 +154,7 @@ class LevelOneScreen extends StatelessWidget {
                               left: 29.0,
                             ),
                             child: Container(
-                              height: 106.0 ,
+                              height: 106.0,
                               width: 106.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -171,7 +164,8 @@ class LevelOneScreen extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 3,
                                     blurRadius: 9,
-                                    offset: const Offset(.5, .5), // changes position of shadow
+                                    offset: const Offset(
+                                        .5, .5), // changes position of shadow
                                   ),
                                 ],
                               ),
@@ -229,8 +223,7 @@ class LevelOneScreen extends StatelessWidget {
                       width: 16.0,
                     ),
                     InkWell(
-                      onTap: ()
-                      {
+                      onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) {
                             return const NumbersScreen();
@@ -238,10 +231,9 @@ class LevelOneScreen extends StatelessWidget {
                         );
                       },
                       child: Stack(
-                        children:
-                        [
+                        children: [
                           Container(
-                            height: 200.0 ,
+                            height: 200.0,
                             width: 165.0,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -251,7 +243,8 @@ class LevelOneScreen extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 4,
                                   blurRadius: 7,
-                                  offset: const Offset(1.5, 2), // changes position of shadow
+                                  offset: const Offset(
+                                      1.5, 2), // changes position of shadow
                                 ),
                               ],
                             ),
@@ -262,7 +255,7 @@ class LevelOneScreen extends StatelessWidget {
                               left: 29.0,
                             ),
                             child: Container(
-                              height: 106.0 ,
+                              height: 106.0,
                               width: 106.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -272,7 +265,8 @@ class LevelOneScreen extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 3,
                                     blurRadius: 9,
-                                    offset: const Offset(.5, .5), // changes position of shadow
+                                    offset: const Offset(
+                                        .5, .5), // changes position of shadow
                                   ),
                                 ],
                               ),
@@ -332,22 +326,18 @@ class LevelOneScreen extends StatelessWidget {
                   height: 16.0,
                 ),
                 Row(
-                  children:
-                  [
+                  children: [
                     InkWell(
-                      onTap: ()
-                      {
+                      onTap: () {
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder:
-                              (context) => const ShapesScreen()
-                          ),
+                          MaterialPageRoute(
+                              builder: (context) => const ShapesScreen()),
                         );
                       },
                       child: Stack(
-                        children:
-                        [
+                        children: [
                           Container(
-                            height: 200.0 ,
+                            height: 200.0,
                             width: 165.0,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -357,7 +347,8 @@ class LevelOneScreen extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 4,
                                   blurRadius: 7,
-                                  offset: const Offset(1.5, 2), // changes position of shadow
+                                  offset: const Offset(
+                                      1.5, 2), // changes position of shadow
                                 ),
                               ],
                             ),
@@ -368,7 +359,7 @@ class LevelOneScreen extends StatelessWidget {
                               left: 29.0,
                             ),
                             child: Container(
-                              height: 106.0 ,
+                              height: 106.0,
                               width: 106.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -378,7 +369,8 @@ class LevelOneScreen extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 3,
                                     blurRadius: 9,
-                                    offset: const Offset(.5, .5), // changes position of shadow
+                                    offset: const Offset(
+                                        .5, .5), // changes position of shadow
                                   ),
                                 ],
                               ),
@@ -436,15 +428,18 @@ class LevelOneScreen extends StatelessWidget {
                       width: 16.0,
                     ),
                     InkWell(
-                      onTap: ()
-                      {
-
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DrawingScreen(),
+                          ),
+                        );
                       },
                       child: Stack(
-                        children:
-                        [
+                        children: [
                           Container(
-                            height: 200.0 ,
+                            height: 200.0,
                             width: 165.0,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -454,7 +449,8 @@ class LevelOneScreen extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 4,
                                   blurRadius: 7,
-                                  offset: const Offset(1.5, 2), // changes position of shadow
+                                  offset: const Offset(
+                                      1.5, 2), // changes position of shadow
                                 ),
                               ],
                             ),
@@ -465,7 +461,7 @@ class LevelOneScreen extends StatelessWidget {
                               left: 29.0,
                             ),
                             child: Container(
-                              height: 106.0 ,
+                              height: 106.0,
                               width: 106.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -475,7 +471,8 @@ class LevelOneScreen extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 3,
                                     blurRadius: 9,
-                                    offset: const Offset(.5, .5), // changes position of shadow
+                                    offset: const Offset(
+                                        .5, .5), // changes position of shadow
                                   ),
                                 ],
                               ),
