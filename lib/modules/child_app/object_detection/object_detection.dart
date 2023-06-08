@@ -100,7 +100,7 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
                           children: [
                             Image(
                               width: 400,
-                              height: 600,
+                              height: 500,
                               image: FileImage(
                                 c.image!,
                               ),
@@ -108,7 +108,7 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
                             ),
                             Positioned(
                               left: 400 * boxCordinates[0],
-                              top: 600 * boxCordinates[1] - 30,
+                              top: 500 * boxCordinates[1] - 30,
                               child: Container(
                                 alignment: Alignment.center,
                                 padding: const EdgeInsets.all(5),
@@ -134,10 +134,10 @@ class _GallatyScreenState extends State<ObjectDetectionScreen>
                             ),
                             Positioned(
                               left: 400 * boxCordinates[0],
-                              top: 600 * boxCordinates[1],
+                              top: 500 * boxCordinates[1],
                               child: Container(
                                 width: 450 * boxCordinates[2],
-                                height: 600 * boxCordinates[3],
+                                height: 500 * boxCordinates[3],
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     topLeft: noRadius,

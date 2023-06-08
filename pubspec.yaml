@@ -51,6 +51,7 @@ dependencies:
   workmanager: ^0.5.1
   image_picker: any
   dio: ^5.1.2
+  alarm: ^1.0.4
 
 dev_dependencies:
   flutter_test:
@@ -111,6 +112,7 @@ flutter:
      - assets/Database/numbers/sounds/
      - assets/Database/char/images/Iguana.png
      - assets/Database/QNumbers/
+     - assets/alarm/music.mp3
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

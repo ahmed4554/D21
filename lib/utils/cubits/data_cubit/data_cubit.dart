@@ -22,8 +22,9 @@ class DataCubit extends Cubit<DataStates> {
   uploadImage() async {
     var pickedImage = await imagePicker.pickImage(
       source: ImageSource.camera,
+      imageQuality: 100,
       maxWidth: 400,
-      maxHeight: 600,
+      maxHeight: 500,
     );
 
     if (pickedImage != null) {

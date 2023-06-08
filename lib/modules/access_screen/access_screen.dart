@@ -1,3 +1,4 @@
+import 'package:alarm/alarm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project/components/custom_color.dart';
@@ -12,10 +13,9 @@ class AccessScreen extends StatefulWidget {
   State<AccessScreen> createState() => _AccessScreenState();
 }
 
-enum UserType{ child , parent }
+enum UserType { child, parent }
 
 class _AccessScreenState extends State<AccessScreen> {
-
   UserType userType = UserType.parent;
 
   @override
@@ -53,7 +53,7 @@ class _AccessScreenState extends State<AccessScreen> {
                         gradient: const LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          stops: [.1,.7,1.0],
+                          stops: [.1, .7, 1.0],
                           colors: [
                             CustomColor.blue11,
                             Color(0xffEEF8F2),
@@ -124,15 +124,13 @@ class _AccessScreenState extends State<AccessScreen> {
                   child: Row(
                     children: [
                       InkWell(
-                        onTap: ()
-                        {
+                        onTap: () {
                           setState(() {
                             userType = UserType.parent;
                           });
                           Navigator.of(context).push(
-                            MaterialPageRoute(builder:
-                                (context)=> const LoginScreen()
-                            ),
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
                           );
                         },
                         child: Container(
@@ -141,20 +139,20 @@ class _AccessScreenState extends State<AccessScreen> {
                           //padding: const EdgeInsets.all(15),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: userType == UserType.parent ? [
-                              BoxShadow(
-                                  color: Colors.grey[300]!,
-                                  offset: const Offset(4, 4),
-                                  blurRadius: 15,
-                                  spreadRadius: 1
-                              ),
-                              const BoxShadow(
-                                  color: CustomColor.sky,
-                                  offset: Offset(-4, -4),
-                                  blurRadius: 9,
-                                  spreadRadius: .5
-                              )
-                            ] : null,
+                            boxShadow: userType == UserType.parent
+                                ? [
+                                    BoxShadow(
+                                        color: Colors.grey[300]!,
+                                        offset: const Offset(4, 4),
+                                        blurRadius: 15,
+                                        spreadRadius: 1),
+                                    const BoxShadow(
+                                        color: CustomColor.sky,
+                                        offset: Offset(-4, -4),
+                                        blurRadius: 9,
+                                        spreadRadius: .5)
+                                  ]
+                                : null,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Image(
@@ -169,14 +167,13 @@ class _AccessScreenState extends State<AccessScreen> {
                         width: 25,
                       ),
                       InkWell(
-                        onTap: (){
+                        onTap: () {
                           setState(() {
                             userType = UserType.child;
                           });
                           Navigator.of(context).push(
-                            MaterialPageRoute(builder:
-                                (context)=> const ChildHomeScreen()
-                            ),
+                            MaterialPageRoute(
+                                builder: (context) => const ChildHomeScreen()),
                           );
                         },
                         child: Container(
@@ -185,19 +182,21 @@ class _AccessScreenState extends State<AccessScreen> {
                           //padding: const EdgeInsets.all(15),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: userType == UserType.child ? [
-                               BoxShadow(
-                                   color: Colors.grey[300]!,
-                                   offset: const Offset(4, 4),
-                                   blurRadius: 15,
-                                   spreadRadius: 1),
-                               const BoxShadow(
-                                   color: CustomColor.sky,
-                                   offset: Offset(-4, -4),
-                                   blurRadius: 15,
-                                   spreadRadius: 1,
-                               )
-                             ] : null,
+                            boxShadow: userType == UserType.child
+                                ? [
+                                    BoxShadow(
+                                        color: Colors.grey[300]!,
+                                        offset: const Offset(4, 4),
+                                        blurRadius: 15,
+                                        spreadRadius: 1),
+                                    const BoxShadow(
+                                      color: CustomColor.sky,
+                                      offset: Offset(-4, -4),
+                                      blurRadius: 15,
+                                      spreadRadius: 1,
+                                    )
+                                  ]
+                                : null,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Image(
@@ -214,7 +213,12 @@ class _AccessScreenState extends State<AccessScreen> {
               ),
               const SizedBox(
                 height: 20,
-              )
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Alarm.stop(0);
+                  },
+                  child: Text('stop')),
             ],
           ),
         ),
